@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/3d07e7247a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="overflow-y:auto;">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul  id="sideMenu" class="nav-link">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+          
+          
+            <div class="header-text">
+                <p>Front-end Developer</p>
+                <h1>Hi, I'm <span>Hòa</span><br>from Thai Binh, Viet Nam.</h1>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!---------------------------ABOUT ---------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="img" src="images/avt-image.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>"I originate from the province of Thai Binh and presently call Hanoi my home. I am deeply
+                        enthusiastic about seizing every opportunity that comes my way to elevate my skills, with a
+                        steadfast determination to evolve into a proficient web developer and a seasoned UX/UI
+                        designer.
+
+                        My unwavering passion for design and programming fuels my drive. I have a sincere fondness
+                        for both these disciplines, and I am wholeheartedly committed to mastering them.
+
+                        I approach every challenge with an open mind and an eagerness to learn. My journey towards
+                        becoming a skilled developer and designer excites me, and I am fully dedicated to my growth
+                        and self-improvement.
+
+                        Thank you for taking the time to acquaint yourself with my aspirations and background."
+
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UX/UI</span><br>Designing Web/App interface</li>
+                            <li><span>Web development</span><br> Web app development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - current</span><br>UI/UX design training at ET</li>
+                            <li><span>2019-2021</span><br> team lead at StartApp LLC.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - current</span><br>UI/UX design training at ET</li>
+                            <li><span>2016</span><br>MBA from MIT Bangalore.</li>
+                            <li><span>2014</span><br>MBA from IMS Bangalore.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------------------------Services ---------------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services">
+                <div class="services-lists">
+                    <div class="services-list">
+                        <i class="fa-solid fa-code"></i>
+                        <h2>UX/UI design</h2>
+                        <p>my passion and career direction lie in becoming a web developer and UX/UI interface
+                            designer.
+                        </p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+                <div class="services-lists">
+                    <div class="services-list">
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>Web design</h2>
+                        <p>my passion and career direction lie in becoming a web developer and UX/UI interface
+                            designer.
+                        </p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+
+                <div class="services-lists">
+                    <div class="services-list">
+                        <i class="fa-brands fa-app-store-ios"></i>
+                        <h2>App</h2>
+                        <p>my passion and career direction lie in becoming a web developer and UX/UI interface
+                            designer.
+                        </p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!---------------------------Portfolio ---------------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+
+            <div class="work-list">
+                <div class="work">
+                    <img src="/images//work1.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>I have already embarked on this journey by completing a noteworthy graduation project in
+                            this area.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images//work2.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>I have already embarked on this journey by completing a noteworthy graduation project in
+                            this area.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images//work3.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>I have already embarked on this journey by completing a noteworthy graduation project in
+                            this area.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!---------------------------Contact ---------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i>xuanhoaluh15@gmail.com</p>
+                    <p> <i class="fa-solid fa-square-phone"></i>0397345500</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <a href="/images/CV-LuuXuanHoa-LapTrinhVien.pdf" download class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © Hòa. with <i class="fa-solid fa-heart"></i></p>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function openTab(tab) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tab).classList.add("active-tab");
+        }
+
+
+    </script>
+    <script>
+
+var sideMenu = document.getElementById("sideMenu");
+
+function openMenu(){
+    sideMenu.style.right = "0";
+}
+function closeMenu(){
+    sideMenu.style.right = "-200px";
+}
+    </script>
+</body>
+
+</html>
