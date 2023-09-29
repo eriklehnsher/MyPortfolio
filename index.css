@@ -59,7 +59,7 @@ nav ul li a::after {
     width: 0;
     height: 3px;
     background: #FF914D;
-    ;
+    
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -418,6 +418,7 @@ nav .fa-solid {
     display: none;
 }
 
+
 @media only screen and (max-width: 667px) {
     #header {
         background-image: url(/images/BG-Imageforsmaillscreen.png);
@@ -532,4 +533,9 @@ nav .fa-solid {
 
         font-size: 14px;
     }
+}
+#msg{
+    color: #61b752;
+    margin-top: -10px;
+    display: block;
 }

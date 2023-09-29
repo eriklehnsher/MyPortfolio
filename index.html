@@ -9,7 +9,14 @@
     <title>Personal Portfolio Website </title>
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/3d07e7247a.js" crossorigin="anonymous"></script>
-
+    <script src="index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("2XkZPsdgqaa42a5K4");
+        })();
+    </script>
 </head>
 
 <body style="overflow-y:auto;">
@@ -17,7 +24,7 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
-                <ul  id="sideMenu" class="nav-link">
+                <ul id="sideMenu" class="nav-link">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Service</a></li>
@@ -27,8 +34,8 @@
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openMenu()"></i>
             </nav>
-          
-          
+
+
             <div class="header-text">
                 <p>Front-end Developer</p>
                 <h1>Hi, I'm <span>Hòa</span><br>from Thai Binh, Viet Nam.</h1>
@@ -191,12 +198,14 @@
                     <a href="/images/CV-LuuXuanHoa-LapTrinhVien.pdf" download class="btn">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                    <form id="form">
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        <textarea name="Message" id="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" id="button" value="send Email" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
+
                 </div>
             </div>
         </div>
@@ -205,7 +214,6 @@
         <p>copyright © Hòa. with <i class="fa-solid fa-heart"></i></p>
     </div>
     <script>
-
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -219,20 +227,50 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tab).classList.add("active-tab");
         }
+    </script>
 
+    <script>
+        var sideMenu = document.getElementById("sideMenu");
 
+        function openMenu() {
+            sideMenu.style.right = "0";
+        }
+        function closeMenu() {
+            sideMenu.style.right = "-200px";
+        }
     </script>
     <script>
+        const btn = document.getElementById('button');
+        const msg = document.getElementById('msg');
+        const form = document.getElementById('form');
 
-var sideMenu = document.getElementById("sideMenu");
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
 
-function openMenu(){
-    sideMenu.style.right = "0";
-}
-function closeMenu(){
-    sideMenu.style.right = "-200px";
-}
+                btn.value = 'Sending...';
+
+                const serviceID = 'service_pwfaicv';
+                const templateID = 'template_5cw659m';
+
+                emailjs.sendForm(serviceID, templateID, form)
+                    .then(Response => {
+                        btn.value = 'send Email';
+                        msg.innerHTML = "Message sent successfully";
+                        setTimeout(function () {
+                            msg.innerHTML = "";
+                        }, 5000);
+                        form.reset();
+                    }, (err) => {
+                        btn.value = 'Send Email';
+                        alert(JSON.stringify(err));
+                    })
+            });
     </script>
+
+
+
+
 </body>
 
 </html>
