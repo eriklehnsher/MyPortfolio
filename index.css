@@ -423,7 +423,7 @@ nav .fa-solid {
 
 @media only screen and (max-width: 667px) {
     #header {
-        background-image: url('../MyPortfolio/images/BG-Imageforsmaillscreen.png');
+        background-image: url('/images/BG-Imageforsmaillscreen.png');
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: bottom center;
